@@ -8,10 +8,10 @@ export class ProductService {
   
   constructor(private http:HttpClient) { }
   getProducts(){
-    return this.http.get("http://localhost:3000/products");
+    return this.http.get("http://localhost:3300/products");
   }
   newProduct(item:any){
-    return this.http.post("http://localhost:3000/insert",{"product":item})
+    return this.http.post("http://localhost:3300/insert",{"product":item})
     .subscribe(data=>{console.log(data)})
   }
 }
